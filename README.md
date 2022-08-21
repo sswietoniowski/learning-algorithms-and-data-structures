@@ -22,8 +22,8 @@ Also used these (paid) courses & books:
 - [Essential Algorithms, 2nd Edition](https://learning.oreilly.com/library/view/essential-algorithms-2nd/9781119575993/) [:file_folder:](https://www.wiley.com/en-ie/Essential+Algorithms:+A+Practical+Approach+to+Computer+Algorithms+Using+Python+and+C%23,+2nd+Edition-p-9781119575993#downloads-section),
 - [A Common-Sense Guide to Data Structures and Algorithms, Second Edition, 2nd Edition](https://learning.oreilly.com/library/view/a-common-sense-guide/9781680508048/),
 - ~~[40 Algorithms Every Programmer Should Know](https://learning.oreilly.com/library/view/40-algorithms-every/9781789801217/) [:file_folder:](https://github.com/packtpublishing/40-algorithms-every-programmer-should-know)~~,
-- ~~[40 Algorithms Every Programmer Should Know - Second Edition](https://learning.oreilly.com/library/view/40-algorithms-every/9781803247762/),
-- [Advanced Algorithms and Data Structures](https://learning.oreilly.com/library/view/advanced-algorithms-and/9781617295485/) [:file_folder:](https://www.manning.com/downloads/2097)~~,
+- ~~[40 Algorithms Every Programmer Should Know - Second Edition](https://learning.oreilly.com/library/view/40-algorithms-every/9781803247762/)~~,
+- [Advanced Algorithms and Data Structures](https://learning.oreilly.com/library/view/advanced-algorithms-and/9781617295485/) [:file_folder:](https://www.manning.com/downloads/2097),
 - [Algorithms and Data Structures for Massive Datasets](https://learning.oreilly.com/library/view/algorithms-and-data/9781617298035/) [:file_folder:](https://www.manning.com/downloads/2489).
 
 ## Useful Tools & Libraries
