@@ -101,5 +101,36 @@
 
             return result;
         }
+
+        // https://leetcode.com/problems/valid-anagram/
+        // https://youtu.be/9UtInBqnCgA
+        public bool IsAnagram(string s, string t)
+        {
+            var sArr = s.ToCharArray();
+            Array.Sort(sArr);
+            var tArr = t.ToCharArray();
+            Array.Sort(tArr);
+            return new String(sArr) == new String(tArr);
+        }
+
+        // https://leetcode.com/problems/two-sum/
+        // https://youtu.be/KLlXCFG5TnA
+        public int[] TwoSum(int[] nums, int target)
+        {
+            int[] result = new int[2];
+            for (int i = 0; i < nums.Length - 1; i++)
+            {
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    if (nums[i] + nums[j] == target)
+                    {
+                        result[0] = i;
+                        result[1] = j;
+                        return result;
+                    }
+                }
+            }
+            return result;
+        }
     }
 }
