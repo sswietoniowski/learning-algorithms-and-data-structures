@@ -106,6 +106,31 @@
         // https://youtu.be/9UtInBqnCgA
         public bool IsAnagram(string s, string t)
         {
+            // v1
+            //if (s.Length != t.Length)
+            //{
+            //    return false;
+            //}
+
+            //int[] counters = new int[26];
+
+            //for (int i = 0; i < s.Length; i++)
+            //{
+            //    counters[s[i] - 'a']++;
+            //    counters[t[i] - 'a']--;
+            //}
+
+            //foreach (int counter in counters)
+            //{
+            //    if (counter != 0)
+            //    {
+            //        return false;
+            //    }
+            //}
+
+            //return true;
+
+            // v2
             var sArr = s.ToCharArray();
             Array.Sort(sArr);
             var tArr = t.ToCharArray();
@@ -117,20 +142,41 @@
         // https://youtu.be/KLlXCFG5TnA
         public int[] TwoSum(int[] nums, int target)
         {
-            int[] result = new int[2];
-            for (int i = 0; i < nums.Length - 1; i++)
+            // v1
+            //int[] result = new int[2];
+            //for (int i = 0; i < nums.Length - 1; i++)
+            //{
+            //    for (int j = i + 1; j < nums.Length; j++)
+            //    {
+            //        if (nums[i] + nums[j] == target)
+            //        {
+            //            result[0] = i;
+            //            result[1] = j;
+            //            return result;
+            //        }
+            //    }
+            //}
+            //return result;
+
+            // v2
+            Dictionary<int, int> mapping = new();
+
+            for (int i = 0; i < nums.Length; i++)
             {
-                for (int j = i + 1; j < nums.Length; j++)
+                int complement = target - nums[i];
+
+                if (mapping.ContainsKey(complement))
                 {
-                    if (nums[i] + nums[j] == target)
-                    {
-                        result[0] = i;
-                        result[1] = j;
-                        return result;
-                    }
+                    return new int[] { mapping[complement], i };
+                }
+
+                if (!mapping.ContainsKey(nums[i]))
+                {
+                    mapping.Add(nums[i], i);
                 }
             }
-            return result;
+
+            return null;
         }
     }
 }
