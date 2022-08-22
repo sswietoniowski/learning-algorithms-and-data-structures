@@ -12,7 +12,7 @@ This repository contains the following sub-directories:
 
 Based on these (free) courses:
 
-- [TODO](TODO) TODO.
+- [NeetCode](https://neetcode.io/).
 
 Also used these (paid) courses & books:
 
@@ -30,4 +30,4 @@ Also used these (paid) courses & books:
 
 Some useful tools & libraries:
 
-- [TODO](TODO) TODO.
+- [LeetCode](https://leetcode.com/).
