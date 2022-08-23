@@ -282,5 +282,23 @@
 
             return result;
         }
+
+
+        // https://leetcode.com/problems/missing-number/
+        // https://youtu.be/WnPLSRLSANE
+        public int MissingNumber(int[] nums)
+        {
+            Array.Sort(nums);
+            int number = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] != number)
+                {
+                    return number;
+                }
+                number++;
+            }
+            return number;
+        }
     }
 }
