@@ -110,7 +110,7 @@ namespace neetcode
             {
                 bytes[3 - i] = (char)(x >> (i * 8) & 0xff);
             }
-            return new String(bytes);
+            return new string(bytes);
         }
 
         public int StringToInt(string bytesStr)
@@ -144,9 +144,9 @@ namespace neetcode
             List<string> result = new List<string>();
             while (i < n)
             {
-                int length = StringToInt(s.Substring(i, i + 4));
+                int length = StringToInt(s.Substring(i, 4));
                 i += 4;
-                result.Add(s.Substring(i, i + length));
+                result.Add(s.Substring(i, length));
                 i += length;
             }
             return result;
