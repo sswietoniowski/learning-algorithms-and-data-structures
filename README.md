@@ -16,6 +16,7 @@ Based on these (free) courses:
 
 Also used these (paid) courses & books:
 
+- [LeetCode](https://leetcode.com/),
 - [Beginning Data Structures and Algorithms in C#](https://learning.oreilly.com/videos/beginning-data-structures/9781789610352/) [:file_folder:](https://github.com/PacktPublishing/Beginning-Data-Structures-and-Algorithms-in-C-Sharp) :arrow_forward:,
 - [C# Data Structures and Algorithms](https://learning.oreilly.com/library/view/c-data-structures/9781788833738/) [:file_folder:](https://github.com/PacktPublishing/C-Sharp-Data-Structures-and-Algorithms),
 - [Everyday Data Structures](https://learning.oreilly.com/library/view/everyday-data-structures/9781787121041/) [:file_folder:](https://github.com/packtpublishing/everyday-data-structures),
@@ -25,9 +26,3 @@ Also used these (paid) courses & books:
 - ~~[40 Algorithms Every Programmer Should Know - Second Edition](https://learning.oreilly.com/library/view/40-algorithms-every/9781803247762/)~~,
 - [Advanced Algorithms and Data Structures](https://learning.oreilly.com/library/view/advanced-algorithms-and/9781617295485/) [:file_folder:](https://www.manning.com/downloads/2097),
 - [Algorithms and Data Structures for Massive Datasets](https://learning.oreilly.com/library/view/algorithms-and-data/9781617298035/) [:file_folder:](https://www.manning.com/downloads/2489).
-
-## Useful Tools & Libraries
-
-Some useful tools & libraries:
-
-- [LeetCode](https://leetcode.com/).
