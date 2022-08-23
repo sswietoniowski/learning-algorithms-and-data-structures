@@ -288,17 +288,28 @@
         // https://youtu.be/WnPLSRLSANE
         public int MissingNumber(int[] nums)
         {
-            Array.Sort(nums);
-            int number = 0;
+            // v1
+            //Array.Sort(nums);
+            //int number = 0;
+            //for (int i = 0; i < nums.Length; i++)
+            //{
+            //    if (nums[i] != number)
+            //    {
+            //        return number;
+            //    }
+            //    number++;
+            //}
+            //return number;
+
+            // v2
+            int n = nums.Length;
+
             for (int i = 0; i < nums.Length; i++)
             {
-                if (nums[i] != number)
-                {
-                    return number;
-                }
-                number++;
+                n ^= i ^ nums[i];
             }
-            return number;
+
+            return n;
         }
     }
 }
