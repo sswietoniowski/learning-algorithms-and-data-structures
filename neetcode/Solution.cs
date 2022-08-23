@@ -240,5 +240,27 @@
             }
             return counter;
         }
+
+        // https://leetcode.com/problems/reverse-bits/
+        // https://youtu.be/UcoN6UjAI64
+        public uint reverseBits(uint n)
+        {
+            uint result = 0;
+
+            uint inMask = 1;
+            uint outMask = (uint)1 << 31;
+            for (int i = 0; i < 32; i++)
+            {
+                if ((n & inMask) != 0)
+                {
+                    result |= outMask;
+                }
+
+                inMask <<= 1;
+                outMask >>= 1;
+            }
+
+            return result;
+        }
     }
 }
