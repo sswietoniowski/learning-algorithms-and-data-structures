@@ -449,7 +449,7 @@ namespace neetcode
                 }
                 else
                 {
-                    stack.Push(Convert.ToInt32(token));
+                    stack.Push(int.Parse(token));
                 }
             }
 
