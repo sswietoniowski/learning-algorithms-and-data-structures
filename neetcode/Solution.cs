@@ -1,4 +1,6 @@
-﻿namespace neetcode
+﻿using System.Text;
+
+namespace neetcode
 {
     public class Solution
     {
@@ -311,5 +313,78 @@
 
             return n;
         }
+
+        private string StripExtraCharacters(string s)
+        {
+            // v1
+            //StringBuilder sb = new();
+
+            //foreach (var ch in s.ToLower())
+            //{
+            //    if ((ch >= 'a' && ch <= 'z') || (ch >= '0' && ch <= '9'))
+            //    {
+            //        sb.Append(ch);
+            //    }
+            //}
+
+            //return sb.ToString();
+
+            StringBuilder sb = new();
+
+            foreach (var ch in s.ToLower())
+            {
+                if (Char.IsLetterOrDigit(ch))
+                {
+                    sb.Append(ch);
+                }
+            }
+
+            return sb.ToString();
+        }
+
+        // https://leetcode.com/problems/valid-palindrome/
+        // https://youtu.be/jJXJ16kPFWg
+        public bool IsPalindrome(string s)
+        {
+            var cleanedString = StripExtraCharacters(s);
+            var length = cleanedString.Length;
+
+            for (int i = 0; i < length / 2; i++)
+            {
+                if (cleanedString[i] != cleanedString[length - i - 1])
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        // https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+        // https://youtu.be/cQ1Oz4ckceM
+        public int[] TwoSumII(int[] numbers, int target)
+        {
+            int i = 0;
+            int j = numbers.Length - 1;
+
+            while (true)
+            {
+                if (numbers[i] + numbers[j] == target)
+                {
+                    return new int[] { i + 1, j + 1 };
+                }
+                else if (numbers[i] + numbers[j] < target)
+                {
+                    i++;
+                }
+                else
+                {
+                    j--;
+                }
+            }
+
+            return new int[] { -1, -1 };
+        }
+
     }
 }
