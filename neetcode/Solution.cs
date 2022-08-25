@@ -238,8 +238,10 @@ namespace neetcode
                 {
                     counter++;
                 }
+
                 mask <<= 1;
             }
+
             return counter;
         }
 
@@ -401,6 +403,7 @@ namespace neetcode
                 {
                     username = username.Substring(0, plusPosition);
                 }
+
                 string rest = username;
                 int dotPosition = rest.IndexOf('.');
                 StringBuilder sb = new();
@@ -411,12 +414,15 @@ namespace neetcode
                     {
                         rest = rest.Substring(dotPosition + 1, rest.Length - dotPosition - 1);
                     }
+
                     dotPosition = rest.IndexOf('.');
                 }
+
                 if (rest.Length > 0)
                 {
                     sb.Append(rest);
                 }
+
                 username = sb.ToString();
                 uniqueEmails.Add($"{username}@{domain}");
             }
@@ -496,6 +502,40 @@ namespace neetcode
             }
 
             return true;
+        }
+
+        public class ListNode
+        {
+            public int val;
+            public ListNode next;
+
+            public ListNode(int val = 0, ListNode next = null)
+            {
+                this.val = val;
+                this.next = next;
+            }
+        }
+
+        // https://leetcode.com/problems/reverse-linked-list/
+        // https://youtu.be/G0_I-ZF0S38
+        public ListNode ReverseList(ListNode head)
+        {
+            ListNode oldHead = null;
+            ListNode newHead = null;
+
+            while (head != null)
+            {
+                oldHead = newHead;
+                newHead = new ListNode()
+                {
+                    val = head.val,
+                    next = oldHead
+                };
+
+                head = head.next;
+            }
+
+            return newHead;
         }
     }
 }
