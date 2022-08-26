@@ -49,6 +49,8 @@ namespace leetcode
 
                 sb.Append(strs[0][i]);
             }
+
             return sb.ToString();
         }
     }
+}
