@@ -12,7 +12,7 @@ This repository contains the following sub-directories:
 
 Based on these (free) courses:
 
-- [NeetCode](https://neetcode.io/) [:file_folder:](https://github.com/neetcode-gh/leetcode).
+- [NeetCode](https://neetcode.io/) [:file_folder:](https://github.com/neetcode-gh/leetcode) :arrow_forward:.
 
 Also used these (paid) courses & books:
 
