@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace neetcode
+namespace neetcode.P0271_EncodeAndDecodeStrings
 {
     // https://leetcode.com/problems/encode-and-decode-strings/
     // https://youtu.be/B1k_sxOSgv8
