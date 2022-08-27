@@ -14,7 +14,9 @@ This repository contains the following sub-directories:
 
 Based on these (free) courses:
 
-- [NeetCode](https://neetcode.io/) [:file_folder:](https://github.com/neetcode-gh/leetcode) :arrow_forward:.
+- [NeetCode](https://neetcode.io/) [:file_folder:](https://github.com/neetcode-gh/leetcode) :arrow_forward:,
+- [How to use Leetcode in 2020](https://youtu.be/6jf6SK9qWBc),
+- [Leetcode Patterns](https://seanprashad.com/leetcode-patterns/).
 
 Also used these (paid) courses & books:
 
