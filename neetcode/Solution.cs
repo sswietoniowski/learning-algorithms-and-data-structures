@@ -750,16 +750,41 @@ namespace neetcode
         // https://youtu.be/OnSn2XEQ4MY
         public TreeNode InvertTree(TreeNode root)
         {
+            // v1
+            //if (root == null)
+            //{
+            //    return null;
+            //}
+            //else
+            //{
+            //    var left = InvertTree(root.right);
+            //    var right = InvertTree(root.left);
+            //    root.left = left;
+            //    root.right = right;
+            //}
+            //return root;
+
+            // v2
             if (root == null)
             {
                 return null;
             }
-            else
+            Queue<TreeNode> queue = new();
+            queue.Enqueue(root);
+            while (queue.Count > 0)
             {
-                var left = InvertTree(root.right);
-                var right = InvertTree(root.left);
-                root.left = left;
-                root.right = right;
+                var current = queue.Dequeue();
+                var tmp = current.left;
+                current.left = current.right;
+                current.right = tmp;
+                if (current.left != null)
+                {
+                    queue.Enqueue(current.left);
+                }
+                if (current.right != null)
+                {
+                    queue.Enqueue(current.right);
+                }
             }
             return root;
         }
