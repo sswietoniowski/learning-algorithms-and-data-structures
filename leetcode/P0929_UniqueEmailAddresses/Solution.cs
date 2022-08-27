@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace leetcode.P929_UniqueEmailAddresses
+namespace leetcode.P0929_UniqueEmailAddresses
 {
     public class Solution
     {

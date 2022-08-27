@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace leetcode
+namespace leetcode.P0014_LongestCommonPrefix
 {
     public class Solution
     {
@@ -52,21 +52,6 @@ namespace leetcode
             }
 
             return sb.ToString();
-        }
-
-        // https://leetcode.com/problems/remove-duplicates-from-sorted-array/
-        public int RemoveDuplicates(int[] nums)
-        {
-            int k = 0;
-            for (int i = 1; i < nums.Length; i++)
-            {
-                if (nums[k] != nums[i])
-                {
-                    k++;
-                    nums[k] = nums[i];
-                }
-            }
-            return k + 1;
         }
     }
 }
