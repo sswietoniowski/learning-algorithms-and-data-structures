@@ -712,7 +712,7 @@ namespace neetcode
             int buyDay = 0;
             int sellDay = 1;
 
-            while (buyDay < prices.Length && sellDay < prices.Length)
+            while (sellDay < prices.Length)
             {
                 if (prices[buyDay] >= prices[sellDay])
                 {
