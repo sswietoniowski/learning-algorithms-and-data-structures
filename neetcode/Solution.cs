@@ -732,5 +732,36 @@ namespace neetcode
 
             return maxProfit;
         }
+
+        public class TreeNode
+        {
+            public int val;
+            public TreeNode left;
+            public TreeNode right;
+            public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
+            {
+                this.val = val;
+                this.left = left;
+                this.right = right;
+            }
+        }
+
+        // https://leetcode.com/problems/invert-binary-tree/
+        // https://youtu.be/OnSn2XEQ4MY
+        public TreeNode InvertTree(TreeNode root)
+        {
+            if (root == null)
+            {
+                return null;
+            }
+            else
+            {
+                var left = InvertTree(root.right);
+                var right = InvertTree(root.left);
+                root.left = left;
+                root.right = right;
+            }
+            return root;
+        }
     }
 }
