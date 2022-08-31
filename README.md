@@ -7,8 +7,7 @@ This repository contains examples of different algorithms & data structures impl
 This repository contains the following sub-directories:
 
 - [neetcode](https://github.com/sswietoniowski/learning-csharp-algorithms-and-data-structures/tree/master/neetcode) solutions to "NeetcCode",
-- [leetcode](https://github.com/sswietoniowski/learning-csharp-algorithms-and-data-structures/tree/master/leetcode) solutions to "LeetCode" (excluding the ones solved for "NeetCode")
-- [complete_masterclass](https://github.com/sswietoniowski/learning-csharp-algorithms-and-data-structures/tree/master/complete_masterclass) solutions to "Data Structures and Algorithms: The Complete Masterclass".
+- [leetcode](https://github.com/sswietoniowski/learning-csharp-algorithms-and-data-structures/tree/master/leetcode) solutions to "LeetCode" (excluding the ones solved for "NeetCode").
 
 ## Learning Resources
 
