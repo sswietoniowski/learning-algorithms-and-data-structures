@@ -114,7 +114,6 @@
     // v2
     public class KthLargest
     {
-
         private readonly int _k;
         private readonly PriorityQueue<int, int> _priorityQueue;
 
