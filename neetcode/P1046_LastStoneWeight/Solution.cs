@@ -1,5 +1,7 @@
 ﻿namespace neetcode.P1046_LastStoneWeight
 {
+    // https://leetcode.com/problems/last-stone-weight/
+    // https://youtu.be/B-QCq79-Vfw
     public class Solution
     {
         public int LastStoneWeight(int[] stones)
