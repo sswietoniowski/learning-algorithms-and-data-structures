@@ -7,7 +7,7 @@
         public int MissingNumber(int[] nums)
         {
             // v1
-            //Array.Sort(nums);
+            //_array.Sort(nums);
             //int number = 0;
             //for (int i = 0; i < nums.Length; i++)
             //{

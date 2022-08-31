@@ -1,18 +1,18 @@
 ﻿namespace neetcode.P0703_KthLargestElementInAStream
 {
-    // 
-    // https://pragmaticdevs.wordpress.com/2015/09/15/heap-data-structure-using-c/
-    public class MinHeap
+    public class MinBinaryHeap
     {
-        public MinHeap(int[] input, int length)
+        public MinBinaryHeap(int[] input, int length)
         {
-
-            this.Length = length;
-            this.Array = input;
-            BuildMinHeap();
+            this.Length = 0;
+            this._array = new int[Math.Max(length + 1, input.Length)];
+            for (int i = 0; i < input.Length; i++)
+            {
+                Add(input[i]);
+            }
         }
 
-        public int[] Array { get; private set; }
+        private int[] _array { get; set; }
 
         public int Length { get; private set; }
 
@@ -32,21 +32,21 @@
             var right = 2 * index + 1;
 
             int Min = index;
-            if (left <= this.Length && this.Array[left - 1] < this.Array[index - 1])
+            if (left <= this.Length && this._array[left - 1] < this._array[index - 1])
             {
                 Min = left;
             }
 
-            if (right <= this.Length && this.Array[right - 1] < this.Array[Min - 1])
+            if (right <= this.Length && this._array[right - 1] < this._array[Min - 1])
             {
                 Min = right;
             }
 
             if (Min != index)
             {
-                int temp = this.Array[Min - 1];
-                this.Array[Min - 1] = this.Array[index - 1];
-                this.Array[index - 1] = temp;
+                int temp = this._array[Min - 1];
+                this._array[Min - 1] = this._array[index - 1];
+                this._array[index - 1] = temp;
                 MinHeapify(Min);
             }
 
@@ -55,12 +55,31 @@
 
         public int RemoveMinimum()
         {
-            int Minimum = this.Array[0];
+            int Minimum = this._array[0];
 
-            this.Array[0] = this.Array[this.Length - 1];
+            this._array[0] = this._array[this.Length - 1];
             this.Length--;
             MinHeapify(1);
             return Minimum;
+        }
+
+        public int Peek()
+        {
+            return this._array[0];
+        }
+
+        public void Add(int value)
+        {
+            this.Length++;
+            this._array[this.Length - 1] = value;
+            int index = this.Length - 1;
+            while (index > 0 && this._array[index] < this._array[(index - 1) / 2])
+            {
+                int temp = this._array[index];
+                this._array[index] = this._array[(index - 1) / 2];
+                this._array[(index - 1) / 2] = temp;
+                index = (index - 1) / 2;
+            }
         }
     }
 
@@ -69,22 +88,26 @@
     public class KthLargest
     {
         private readonly int _k;
-        private readonly MinHeap _minHeap;
+        private readonly MinBinaryHeap _minBinaryHeap;
 
         public KthLargest(int k, int[] nums)
         {
             _k = k;
-            _minHeap = new MinHeap(nums, nums.Length);
-            while (_minHeap.Length > _k)
+            _minBinaryHeap = new MinBinaryHeap(nums, nums.Length);
+            while (_minBinaryHeap.Length > _k)
             {
-                _minHeap.RemoveMinimum();
+                _minBinaryHeap.RemoveMinimum();
             }
         }
 
         public int Add(int val)
         {
-            priorityQueue.Enqueue(val, val);
-            return 0;
+            _minBinaryHeap.Add(val);
+            while (_minBinaryHeap.Length > _k)
+            {
+                _minBinaryHeap.RemoveMinimum();
+            }
+            return _minBinaryHeap.Peek();
         }
     }
 
