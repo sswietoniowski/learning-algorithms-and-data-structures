@@ -15,7 +15,8 @@ Based on these (free) courses:
 
 - [NeetCode](https://neetcode.io/) [:file_folder:](https://github.com/neetcode-gh/leetcode) :arrow_forward: :+1:,
 - [How to use Leetcode in 2020](https://youtu.be/6jf6SK9qWBc) :+1:,
-- [Leetcode Patterns](https://seanprashad.com/leetcode-patterns/) :+1:.
+- [Leetcode Patterns](https://seanprashad.com/leetcode-patterns/) :+1:,
+- [Data Structures](https://youtube.com/playlist?list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX).
 
 Also used these (paid) courses & books:
 
