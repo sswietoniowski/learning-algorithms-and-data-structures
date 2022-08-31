@@ -85,62 +85,63 @@
 
     // https://leetcode.com/problems/kth-largest-element-in-a-stream/
     // https://youtu.be/hOjcdrqMoQ8
-    public class KthLargest
-    {
-        private readonly int _k;
-        private readonly MinBinaryHeap _minBinaryHeap;
-
-        public KthLargest(int k, int[] nums)
-        {
-            _k = k;
-            _minBinaryHeap = new MinBinaryHeap(nums, nums.Length);
-            while (_minBinaryHeap.Length > _k)
-            {
-                _minBinaryHeap.RemoveMinimum();
-            }
-        }
-
-        public int Add(int val)
-        {
-            _minBinaryHeap.Add(val);
-            while (_minBinaryHeap.Length > _k)
-            {
-                _minBinaryHeap.RemoveMinimum();
-            }
-            return _minBinaryHeap.Peek();
-        }
-    }
-
-    // v2
     //public class KthLargest
     //{
-
     //    private readonly int _k;
-    //    private readonly PriorityQueue<int, int> _priorityQueue = new();
+    //    private readonly MinBinaryHeap _minBinaryHeap;
 
     //    public KthLargest(int k, int[] nums)
     //    {
     //        _k = k;
-    //        for (int i = 0; i < nums.Length; i++)
+    //        _minBinaryHeap = new MinBinaryHeap(nums, nums.Length);
+    //        while (_minBinaryHeap.Length > _k)
     //        {
-    //            _priorityQueue.Enqueue(nums[i], nums[i]);
-    //        }
-    //        while (_priorityQueue.Count > k)
-    //        {
-    //            _priorityQueue.Dequeue();
+    //            _minBinaryHeap.RemoveMinimum();
     //        }
     //    }
 
     //    public int Add(int val)
     //    {
-    //        _priorityQueue.Enqueue(val, val);
-    //        while (_priorityQueue.Count > _k)
+    //        _minBinaryHeap.Add(val);
+    //        while (_minBinaryHeap.Length > _k)
     //        {
-    //            _priorityQueue.Dequeue();
+    //            _minBinaryHeap.RemoveMinimum();
     //        }
-    //        return _priorityQueue.Peek();
+    //        return _minBinaryHeap.Peek();
     //    }
     //}
+
+    // v2
+    public class KthLargest
+    {
+
+        private readonly int _k;
+        private readonly PriorityQueue<int, int> _priorityQueue;
+
+        public KthLargest(int k, int[] nums)
+        {
+            _priorityQueue = new PriorityQueue<int, int>(Math.Max(nums.Length, k + 1));
+            _k = k;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                _priorityQueue.Enqueue(nums[i], nums[i]);
+            }
+            while (_priorityQueue.Count > k)
+            {
+                _priorityQueue.Dequeue();
+            }
+        }
+
+        public int Add(int val)
+        {
+            _priorityQueue.Enqueue(val, val);
+            while (_priorityQueue.Count > _k)
+            {
+                _priorityQueue.Dequeue();
+            }
+            return _priorityQueue.Peek();
+        }
+    }
 
     /**
      * Your KthLargest object will be instantiated and called as such:
