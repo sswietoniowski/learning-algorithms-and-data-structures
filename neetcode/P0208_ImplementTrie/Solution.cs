@@ -30,7 +30,7 @@
             node.isCompleteWord = true;
         }
 
-        private Node FindNode(string word)
+        public Node FindNode(string word)
         {
             var node = root;
             foreach (var character in word)
