@@ -2,8 +2,8 @@
 {
     public class Node
     {
-        public Dictionary<char, Node> children = new();
-        public bool isCompleteWord = false;
+        public Dictionary<char, Node> Children { get; } = new();
+        public bool IsCompleteWord { get; set; } = false;
     }
 
     // https://leetcode.com/problems/implement-trie-prefix-tree/
@@ -11,7 +11,7 @@
     public class Trie
     {
         private Node root = new();
-        
+
         public Trie()
         {
         }
@@ -21,13 +21,13 @@
             var node = root;
             foreach (var character in word)
             {
-                if (!node.children.ContainsKey(character))
+                if (!node.Children.ContainsKey(character))
                 {
-                    node.children[character] = new Node();
+                    node.Children[character] = new Node();
                 }
-                node = node.children[character];
+                node = node.Children[character];
             }
-            node.isCompleteWord = true;
+            node.IsCompleteWord = true;
         }
 
         public Node FindNode(string word)
@@ -35,18 +35,18 @@
             var node = root;
             foreach (var character in word)
             {
-                if (!node.children.ContainsKey(character))
+                if (!node.Children.ContainsKey(character))
                 {
                     return null;
                 }
-                node = node.children[character];
+                node = node.Children[character];
             }
             return node;
         }
 
         public bool Search(string word)
         {
-            return FindNode(word)?.isCompleteWord ?? false;
+            return FindNode(word)?.IsCompleteWord ?? false;
         }
 
         public bool StartsWith(string prefix)
