@@ -31,3 +31,10 @@ Also used these (paid) courses & books:
 - ~~[40 Algorithms Every Programmer Should Know - Second Edition](https://learning.oreilly.com/library/view/40-algorithms-every/9781803247762/)~~,
 - [Advanced Algorithms and Data Structures](https://learning.oreilly.com/library/view/advanced-algorithms-and/9781617295485/) [:file_folder:](https://www.manning.com/downloads/2097),
 - [Algorithms and Data Structures for Massive Datasets](https://learning.oreilly.com/library/view/algorithms-and-data/9781617298035/) [:file_folder:](https://www.manning.com/downloads/2489).
+
+## Useful Tools & Libraries
+
+Some useful tools & libraries:
+
+- [VisuAlgo.net](https://visualgo.net/en),
+- [Red/Black Tree](https://www.cs.usfca.edu/~galles/visualization/RedBlack.html).
