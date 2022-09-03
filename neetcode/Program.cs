@@ -1,3 +1,1 @@
-﻿using neetcode;
-
-Console.WriteLine("Hello NeetCode");
+﻿Console.WriteLine("Hello NeetCode");
