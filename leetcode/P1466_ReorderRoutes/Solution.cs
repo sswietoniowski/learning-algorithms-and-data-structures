@@ -27,8 +27,6 @@
 
         public int MinReorder(int n, int[][] connections)
         {
-            int result = 0;
-
             Dictionary<int, Dictionary<int, int>> edges = new();
 
             for (int i = 0; i < n; i++)
