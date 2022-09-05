@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace neetcode.P0062_UniquePaths
+﻿namespace neetcode.P0062_UniquePaths
 {
     // https://leetcode.com/problems/unique-paths/
     // https://youtu.be/IlEsdxuD4lY
