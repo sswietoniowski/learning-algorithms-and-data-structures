@@ -8,63 +8,52 @@ namespace neetcode.P0036_ValidSudoku
     {
         public bool IsValidSudoku(char[][] board)
         {
-            for (int i = 0; i < 9; i++)
+            Dictionary<int, HashSet<char>> rows = new();
+            Dictionary<int, HashSet<char>> columns = new();
+            Dictionary<(int, int), HashSet<char>> squares = new();
+
+            for (int r = 0; r < 9; r++)
             {
-                HashSet<char> digitsRow = new();
-                HashSet<char> digitsColumn = new();
-
-                for (int j = 0; j < 9; j++)
+                for (int c = 0; c < 9; c++)
                 {
-                    char currentRow = board[i][j];
-                    char currentColumn = board[j][i];
+                    char current = board[r][c];
 
-                    if (currentRow != '.')
+                    if (current == '.')
                     {
-                        if (digitsRow.Contains(currentRow))
-                        {
-                            return false;
-                        }
-
-                        digitsRow.Add(currentRow);
+                        continue;
                     }
 
-                    if (currentColumn != '.')
+                    if (!rows.ContainsKey(r))
                     {
-                        if (digitsColumn.Contains(currentColumn))
-                        {
-                            return false;
-                        }
-
-                        digitsColumn.Add(currentColumn);
+                        rows.Add(r, new HashSet<char>());
                     }
-                }
-            }
-
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 3; j++)
-                {
-                    HashSet<char> digitsGroup = new();
-                    
-                    for (int k = 0; k < 3; k++)
+                    else if (rows[r].Contains(current))
                     {
-                        for (int m = 0; m < 3; m++)
-                        {
-                            char current = board[(i * 3) + k][(j * 3) + m];
-
-                            if (current == '.')
-                            {
-                                continue;
-                            }
-
-                            if (digitsGroup.Contains(current))
-                            {
-                                return false;
-                            }
-
-                            digitsGroup.Add(current);
-                        }
+                        return false;
                     }
+
+                    if (!columns.ContainsKey(c))
+                    {
+                        columns.Add(c, new HashSet<char>());
+                    }
+                    else if (columns[c].Contains(current))
+                    {
+                        return false;
+                    }
+
+                    (int r, int c) coordinates = (r / 3, c / 3);
+
+                    if (!squares.ContainsKey(coordinates))
+                    {
+                        squares[coordinates] = new HashSet<char>();
+                    } else if (squares[coordinates].Contains(current))
+                    {
+                        return false;
+                    }
+
+                    rows[r].Add(current);
+                    columns[c].Add(current);
+                    squares[coordinates].Add(current);
                 }
             }
 
