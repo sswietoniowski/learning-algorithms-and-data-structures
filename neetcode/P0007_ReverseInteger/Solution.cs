@@ -23,7 +23,7 @@
                     }
                 }
             }
-            catch (OverflowException e)
+            catch (OverflowException)
             {
                 result = 0;
             }
