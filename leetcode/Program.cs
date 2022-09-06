@@ -1,1 +1,2 @@
-﻿Console.WriteLine("Hello LeetCode");
+﻿
+Console.WriteLine("Hello LeetCode");
