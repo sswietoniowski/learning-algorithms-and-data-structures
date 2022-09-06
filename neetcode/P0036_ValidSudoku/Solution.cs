@@ -1,6 +1,4 @@
-﻿using System.Xml.Schema;
-
-namespace neetcode.P0036_ValidSudoku
+﻿namespace neetcode.P0036_ValidSudoku
 {
     // https://leetcode.com/problems/valid-sudoku/
     // https://youtu.be/TjFXEUCMqI8
@@ -46,7 +44,8 @@ namespace neetcode.P0036_ValidSudoku
                     if (!squares.ContainsKey(coordinates))
                     {
                         squares[coordinates] = new HashSet<char>();
-                    } else if (squares[coordinates].Contains(current))
+                    }
+                    else if (squares[coordinates].Contains(current))
                     {
                         return false;
                     }
