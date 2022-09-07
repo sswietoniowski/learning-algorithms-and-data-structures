@@ -11,12 +11,7 @@
             int right = height.Length - 1;
             while (left < right)
             {
-                int currentArea = Math.Min(height[left], height[right]) * (right - left);
-
-                if (currentArea > area)
-                {
-                    area = currentArea;
-                }
+                area = Math.Max(area, Math.Min(height[left], height[right]) * (right - left));
 
                 if (height[left] < height[right])
                 {
