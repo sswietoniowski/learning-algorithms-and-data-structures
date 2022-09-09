@@ -1,5 +1,7 @@
 ﻿namespace neetcode.P0003_LongestSubstringWithoutRepeatingCharacters
 {
+    // https://leetcode.com/problems/longest-substring-without-repeating-characters/
+    // https://youtu.be/wiGpQwVHdE0
     public class Solution
     {
         public int LengthOfLongestSubstring(string s)
