@@ -6,48 +6,23 @@
     {
         public int LengthOfLongestSubstring(string s)
         {
-            int longestIndex = 0;
-            int longestLength = 0;
-
-            int currentIndex = 0;
-            int currentLength = 0;
-            HashSet<char> currentCharacters = new();
-
-            for (int i = 0; i < s.Length; i++)
+            HashSet<char> characters = new();
+            int left = 0;
+            int length = 0;
+            
+            for (int right = 0; right < s.Length; right++)
             {
-                if (!currentCharacters.Contains(s[i]))
+                while (characters.Contains(s[right]))
                 {
-                    currentCharacters.Add(s[i]);
-                    currentLength++;
+                    characters.Remove(s[left]);
+                    left++;
                 }
-                else
-                {
-                    if (currentLength > longestLength)
-                    {
-                        longestIndex = currentIndex;
-                        longestLength = currentLength;
-                    }
 
-                    currentIndex = i;
-                    currentLength = 1;
-                    currentCharacters.Clear();
-                    currentCharacters.Add(s[i]);
-                    while (currentIndex - 1 >= 0 && !currentCharacters.Contains(s[currentIndex - 1]))
-                    {
-                        currentIndex--;
-                        currentLength++;
-                        currentCharacters.Add(s[currentIndex]);
-                    }
-                }
+                characters.Add(s[right]);
+                length = Math.Max(length, right - left + 1);
             }
 
-            if (currentLength > longestLength)
-            {
-                longestIndex = currentIndex;
-                longestLength = currentLength;
-            }
-
-            return longestLength;
+            return length;
         }
     }
 }
