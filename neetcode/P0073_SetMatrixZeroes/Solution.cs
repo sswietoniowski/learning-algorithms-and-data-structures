@@ -1,5 +1,7 @@
 ﻿namespace neetcode.P0073_SetMatrixZeroes
 {
+    // https://leetcode.com/problems/set-matrix-zeroes/
+    // https://youtu.be/T41rL0L3Pnw
     public class Solution
     {
         public void SetZeroes(int[][] matrix)
