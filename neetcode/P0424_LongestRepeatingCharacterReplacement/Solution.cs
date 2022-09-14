@@ -12,11 +12,13 @@
 
             int[] charCount = new int[26];
 
+            int maxCount = 0;
             for (int right = 0; right < s.Length; right++)
             {
                 charCount[s[right] - 'A']++;
+                maxCount = Math.Max(maxCount, charCount[s[right] - 'A']);
 
-                while (right - left + 1 - charCount.Max() > k)
+                while (right - left + 1 - maxCount > k)
                 {
                     charCount[s[left] - 'A']--;
                     left++;
