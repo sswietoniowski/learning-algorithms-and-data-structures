@@ -1,4 +1,4 @@
-﻿namespace neetcode.P543_DiametrOfBinaryTree
+﻿namespace neetcode.P0543_DiametrOfBinaryTree
 {
     // https://leetcode.com/problems/diameter-of-binary-tree/
     // https://youtu.be/bkxqA8Rfv04

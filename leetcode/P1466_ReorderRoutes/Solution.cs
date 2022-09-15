@@ -1,4 +1,4 @@
-﻿namespace neetcode
+﻿namespace leetcode.P1466_ReorderRoutes
 {
     public class Solution
     {
