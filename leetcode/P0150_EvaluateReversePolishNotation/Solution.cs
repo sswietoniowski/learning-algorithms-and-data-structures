@@ -1,37 +1,36 @@
-﻿namespace leetcode.P0150_EvaluateReversePolishNotation
+﻿namespace leetcode.P0150_EvaluateReversePolishNotation;
+
+public class Solution
 {
-    public class Solution
+    // https://leetcode.com/problems/evaluate-reverse-polish-notation/
+    public int EvalRPN(string[] tokens)
     {
-        // https://leetcode.com/problems/evaluate-reverse-polish-notation/
-        public int EvalRPN(string[] tokens)
+        var operators = new HashSet<string>() { "+", "-", "*", "/" };
+        var stack = new Stack<int>();
+
+        foreach (var token in tokens)
         {
-            var operators = new HashSet<string>() { "+", "-", "*", "/" };
-            var stack = new Stack<int>();
-
-            foreach (var token in tokens)
+            if (operators.Contains(token))
             {
-                if (operators.Contains(token))
+                int b = stack.Pop();
+                int a = stack.Pop();
+                int c = token switch
                 {
-                    int b = stack.Pop();
-                    int a = stack.Pop();
-                    int c = token switch
-                    {
-                        "+" => a + b,
-                        "-" => a - b,
-                        "*" => a * b,
-                        "/" => a / b,
-                        _ => 0
-                    };
+                    "+" => a + b,
+                    "-" => a - b,
+                    "*" => a * b,
+                    "/" => a / b,
+                    _ => 0
+                };
 
-                    stack.Push(c);
-                }
-                else
-                {
-                    stack.Push(int.Parse(token));
-                }
+                stack.Push(c);
             }
-
-            return stack.Pop();
+            else
+            {
+                stack.Push(int.Parse(token));
+            }
         }
+
+        return stack.Pop();
     }
 }

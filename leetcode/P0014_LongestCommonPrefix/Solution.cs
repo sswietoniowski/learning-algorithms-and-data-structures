@@ -1,57 +1,56 @@
 ﻿using System.Text;
 
-namespace leetcode.P0014_LongestCommonPrefix
+namespace leetcode.P0014_LongestCommonPrefix;
+
+public class Solution
 {
-    public class Solution
+    // https://leetcode.com/problems/longest-common-prefix/
+    public string LongestCommonPrefix(string[] strs)
     {
-        // https://leetcode.com/problems/longest-common-prefix/
-        public string LongestCommonPrefix(string[] strs)
+        int n = strs.Length;
+
+        if (n == 1)
         {
-            int n = strs.Length;
+            return strs[0];
+        }
 
-            if (n == 1)
+        int maxLength = 200;
+        foreach (var str in strs)
+        {
+            if (maxLength > str.Length)
             {
-                return strs[0];
+                maxLength = str.Length;
             }
+        }
 
-            int maxLength = 200;
-            foreach (var str in strs)
+        if (maxLength == 0)
+        {
+            return "";
+        }
+
+        StringBuilder sb = new();
+        for (int i = 0; i < maxLength; i++)
+        {
+            char current = strs[0][i];
+            bool isCommon = true;
+
+            for (int j = 1; j < n; j++)
             {
-                if (maxLength > str.Length)
+                if (strs[j][i] != current)
                 {
-                    maxLength = str.Length;
-                }
-            }
-
-            if (maxLength == 0)
-            {
-                return "";
-            }
-
-            StringBuilder sb = new();
-            for (int i = 0; i < maxLength; i++)
-            {
-                char current = strs[0][i];
-                bool isCommon = true;
-
-                for (int j = 1; j < n; j++)
-                {
-                    if (strs[j][i] != current)
-                    {
-                        isCommon = false;
-                        break;
-                    }
-                }
-
-                if (!isCommon)
-                {
+                    isCommon = false;
                     break;
                 }
-
-                sb.Append(strs[0][i]);
             }
 
-            return sb.ToString();
+            if (!isCommon)
+            {
+                break;
+            }
+
+            sb.Append(strs[0][i]);
         }
+
+        return sb.ToString();
     }
 }
