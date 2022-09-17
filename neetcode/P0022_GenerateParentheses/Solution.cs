@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace neetcode.P0022_GenerateParentheses;
+﻿namespace neetcode.P0022_GenerateParentheses;
 
 // https://leetcode.com/problems/generate-parentheses/
 // https://youtu.be/s9fokUqJ76A
