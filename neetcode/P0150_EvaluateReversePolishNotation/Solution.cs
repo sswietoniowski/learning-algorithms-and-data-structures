@@ -1,4 +1,4 @@
-﻿namespace neetcode._150_EvaluateReversePolishNotation;
+﻿namespace neetcode.P0150_EvaluateReversePolishNotation;
 
 // https://leetcode.com/problems/evaluate-reverse-polish-notation/
 // https://youtu.be/iu0082c4HDE
@@ -6,7 +6,7 @@ public class Solution
 {
     public int EvalRPN(string[] tokens)
     {
-        var operators = new HashSet<string> {"+", "-", "*", "/"};
+        var operators = new HashSet<string> { "+", "-", "*", "/" };
         var stack = new Stack<int>();
 
         foreach (var token in tokens)
