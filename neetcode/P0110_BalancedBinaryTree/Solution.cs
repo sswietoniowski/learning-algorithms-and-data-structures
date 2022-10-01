@@ -31,8 +31,24 @@ public class TreeNode
 // https://youtu.be/QfJsau0ItOY
 public class Solution
 {
+    private (bool, int) dfs(TreeNode root)
+    {
+        if (root is null)
+        {
+            return (true, 0);
+        }
+
+        var (leftBalanced, leftHeight) = dfs(root.left);
+        var (rightBalanced, rightHeight) = dfs(root.right);
+
+        var balanced = leftBalanced && rightBalanced && Math.Abs(leftHeight - rightHeight) <= 1;
+
+        return (balanced, Math.Max(leftHeight, rightHeight) + 1);
+    }
+    
     public bool IsBalanced(TreeNode root)
     {
-        throw new NotImplementedException();
+        var (balanced, _) = dfs(root);
+        return balanced;
     }
 }
