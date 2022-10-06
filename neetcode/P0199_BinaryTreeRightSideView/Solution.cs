@@ -26,6 +26,9 @@ public class TreeNode
  *     }
  * }
  */
+
+// https://leetcode.com/problems/binary-tree-right-side-view/
+// https://youtu.be/d4zLyf32e3I
 public class Solution
 {
     public IList<int> RightSideView(TreeNode root)
