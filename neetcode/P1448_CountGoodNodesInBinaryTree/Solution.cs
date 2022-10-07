@@ -33,7 +33,7 @@ public class Solution
 {
     public int GoodNodes(TreeNode root)
     {
-        return dfs(root, int.MinValue);
+        return dfs(root, root.val);
     }
 
     private int dfs(TreeNode node, int max)
