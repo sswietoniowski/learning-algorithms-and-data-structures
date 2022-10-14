@@ -22,7 +22,8 @@ public class Solution
 
         foreach (var key in map.Keys)
         {
-            maxHeap.Enqueue(map[key], -map[key]);
+            var count = map[key];
+            maxHeap.Enqueue(count, -count);
         }
 
         int time = 0;
