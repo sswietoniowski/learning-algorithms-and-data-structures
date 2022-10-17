@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace neetcode.P0046_Permutations;
+﻿namespace neetcode.P0046_Permutations;
 
 // https://leetcode.com/problems/permutations/
 // https://youtu.be/s7AvT7cGdSo
@@ -25,7 +23,7 @@ public class Solution
     public IList<IList<int>> Permute(int[] nums)
     {
         var result = new List<IList<int>>();
-        
+
         if (nums is { Length: 0 })
         {
             return result;
