@@ -13,15 +13,15 @@ This repository contains the following sub-directories:
 
 Based on these (free) courses:
 
-- [NeetCode](https://neetcode.io/) [:file_folder:](https://github.com/neetcode-gh/leetcode) :arrow_forward: :+1:,
+- [NeetCode](https://neetcode.io/) [:file_folder:](https://github.com/neetcode-gh/leetcode) :+1:,
 - [How to use Leetcode in 2020](https://youtu.be/6jf6SK9qWBc) :+1:,
 - [Leetcode Patterns](https://seanprashad.com/leetcode-patterns/) :+1:,
 - [Data Structures](https://youtube.com/playlist?list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX).
 
 Also used these (paid) courses & books:
 
-- [LeetCode](https://leetcode.com/) :arrow_forward: :+1:,
-- [Beginning Data Structures and Algorithms in C#](https://learning.oreilly.com/videos/beginning-data-structures/9781789610352/) [:file_folder:](https://github.com/PacktPublishing/Beginning-Data-Structures-and-Algorithms-in-C-Sharp) :arrow_forward:,
+- [LeetCode](https://leetcode.com/) :+1:,
+- [Beginning Data Structures and Algorithms in C#](https://learning.oreilly.com/videos/beginning-data-structures/9781789610352/) [:file_folder:](https://github.com/PacktPublishing/Beginning-Data-Structures-and-Algorithms-in-C-Sharp),
 - [C# Data Structures and Algorithms](https://learning.oreilly.com/library/view/c-data-structures/9781788833738/) [:file_folder:](https://github.com/PacktPublishing/C-Sharp-Data-Structures-and-Algorithms),
 - [Data Structures and Algorithms: The Complete Masterclass](https://learning.oreilly.com/videos/data-structures-and/9781801078504/) [:file_folder:](https://github.com/PacktPublishing/Data-Structures-and-Algorithms-The-Complete-Masterclass) :arrow_forward:,
 - [Everyday Data Structures](https://learning.oreilly.com/library/view/everyday-data-structures/9781787121041/) [:file_folder:](https://github.com/packtpublishing/everyday-data-structures),
