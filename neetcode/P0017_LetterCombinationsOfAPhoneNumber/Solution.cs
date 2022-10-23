@@ -25,28 +25,24 @@ public class Solution
             {'9', "wxyz"}
         };
 
-        var queue = new Queue<string>();
-
-        queue.Enqueue("");
-
-        while (queue.Count > 0)
+        void Backtrack(string combination, int index)
         {
-            var current = queue.Dequeue();
-
-            if (current.Length == digits.Length)
+            if (index == digits.Length)
             {
-                result.Add(current);
+                result.Add(combination);
+                return;
             }
-            else
-            {
-                var letters = map[digits[current.Length]];
 
-                foreach (var letter in letters)
-                {
-                    queue.Enqueue(current + letter);
-                }
+            var digit = digits[index];
+            var letters = map[digit];
+
+            foreach (var letter in letters)
+            {
+                Backtrack(combination + letter, index + 1);
             }
         }
+
+        Backtrack("", 0);
 
         return result;
     }
