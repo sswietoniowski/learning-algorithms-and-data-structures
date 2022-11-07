@@ -1,7 +1,7 @@
 ﻿namespace neetcode.P0207_CourseSchedule;
 
 // https://leetcode.com/problems/course-schedule/
-// https://youtu.be/e69C6xhiSQE
+// https://youtu.be/EgI5nU9etnU
 public class Solution
 {
     private bool IsCyclic(List<int>[] graph, int course, bool[] visited)
