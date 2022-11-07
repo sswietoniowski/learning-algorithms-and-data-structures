@@ -4,28 +4,6 @@
 // https://youtu.be/EgI5nU9etnU
 public class Solution
 {
-    private bool IsCyclic(List<int>[] graph, int course, bool[] visited)
-    {
-        if (visited[course])
-        {
-            return true;
-        }
-
-        visited[course] = true;
-
-        foreach (var nextCourse in graph[course])
-        {
-            if (IsCyclic(graph, nextCourse, visited))
-            {
-                return true;
-            }
-        }
-
-        visited[course] = false;
-
-        return false;
-    }
-
     public bool CanFinish(int numCourses, int[][] prerequisites)
     {
         var graph = new List<int>[numCourses];
@@ -40,16 +18,41 @@ public class Solution
             graph[edge[0]].Add(edge[1]);
         }
 
-        var visited = new bool[numCourses];
+        var visited = new HashSet<int>();
 
-        for (int i = 0; i < numCourses; i++)
+        bool dfs(int course)
         {
-            if (visited[i] == false)
+            if (visited.Contains(course))
             {
-                if (IsCyclic(graph, i, visited))
+                return false;
+            }
+
+            if (graph[course].Count == 0)
+            {
+                return true;
+            }
+
+            visited.Add(course);
+
+            foreach (var nextCourse in graph[course])
+            {
+                if (!dfs(nextCourse))
                 {
                     return false;
                 }
+            }
+
+            visited.Remove(course);
+            graph[course].Clear();
+
+            return true;
+        }
+
+        for (int i = 0; i < numCourses; i++)
+        {
+            if (!dfs(i))
+            {
+                return false;
             }
         }
 
