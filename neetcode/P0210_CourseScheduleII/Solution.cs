@@ -19,22 +19,23 @@ public class Solution
         }
 
         var visited = new HashSet<int>();
+        var cycle = new HashSet<int>();
 
         var result = new List<int>();
 
         bool dfs(int course)
         {
-            if (visited.Contains(course))
+            if (cycle.Contains(course))
             {
                 return false;
             }
 
-            if (graph[course].Count == 0)
+            if (visited.Contains(course))
             {
                 return true;
             }
 
-            visited.Add(course);
+            cycle.Add(course);
 
             foreach (var nextCourse in graph[course])
             {
@@ -44,10 +45,10 @@ public class Solution
                 }
             }
 
-            visited.Remove(course);
-            graph[course].Clear();
-
+            cycle.Remove(course);
+            visited.Add(course);
             result.Add(course);
+
             return true;
         }
 
