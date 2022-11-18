@@ -1,4 +1,6 @@
-﻿namespace neetcode.P0684_RedundantConnection;
+﻿using System.ComponentModel.Design;
+
+namespace neetcode.P0684_RedundantConnection;
 
 // https://leetcode.com/problems/redundant-connection/
 // https://youtu.be/FXWRE67PLL0
@@ -29,31 +31,38 @@ public class Solution
             return p;
         }
 
+        bool Union(int x, int y)
+        {
+            var px = Find(x);
+            var py = Find(y);
+            
+            if (px == py)
+            {
+                return false;
+            }
+
+            if (rank[px] > rank[py])
+            {
+                parent[py] = px;
+                rank[px] += rank[py];
+            }
+            else
+            {
+                parent[px] = py;
+                rank[py] += rank[px];
+            }
+
+            return true;
+        }
+
         foreach (var edge in edges)
         {
             var u = edge[0];
             var v = edge[1];
 
-            var pu = Find(u);
-            var pv = Find(v);
-
-            if (pu == pv)
+            if (!Union(u, v))
             {
                 return edge;
-            }
-
-            if (rank[pu] < rank[pv])
-            {
-                parent[pu] = pv;
-            }
-            else if (rank[pu] > rank[pv])
-            {
-                parent[pv] = pu;
-            }
-            else
-            {
-                parent[pu] = pv;
-                rank[pv]++;
             }
         }
 
