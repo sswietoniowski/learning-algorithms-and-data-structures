@@ -20,12 +20,13 @@ public class Solution
 
         int Find(int x)
         {
-            if (x != parent[x])
+            var p = parent[x];
+            while (p != parent[p])
             {
-                parent[x] = Find(parent[x]);
+                parent[p] = parent[parent[p]];
+                p = parent[p];
             }
-
-            return parent[x];
+            return p;
         }
 
         foreach (var edge in edges)
