@@ -13,6 +13,7 @@ This repository contains the following sub-directories:
 
 Based on these (free) courses:
 
+- **[Algorithms](https://youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O)** :+1:,
 - [NeetCode](https://neetcode.io/) [:file_folder:](https://github.com/neetcode-gh/leetcode) :+1:,
 - [How to use Leetcode in 2020](https://youtu.be/6jf6SK9qWBc) :+1:,
 - [Leetcode Patterns](https://seanprashad.com/leetcode-patterns/) :+1:,
