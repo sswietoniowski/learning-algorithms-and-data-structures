@@ -8,19 +8,27 @@ public class Solution
     {
         // preparing adjacency list
 
-        var size = points.Length;
+        var n = points.Length;
 
-        var adjacencyList = new List<(int, int)>();
+        var adjacencyList = new Dictionary<int, List<(int, int)>>();
 
-        for (var i = 0; i < size; i++)
+        for (var i = 0; i < n; i++)
         {
             var (x1, y1) = (points[i][0], points[i][1]);
-            for (var j = i + 1; j < size; j++)
+            for (var j = i + 1; j < n; j++)
             {
                 var (x2, y2) = (points[j][0], points[j][1]);
-                var dist = Math.Abs(x1 - x2) + Math.Abs(y1 - y2);
-                adjacencyList.Add((dist, i));
-                adjacencyList.Add((dist, j));
+                var distance = Math.Abs(x1 - x2) + Math.Abs(y1 - y2);
+                if (!adjacencyList.ContainsKey(i))
+                {
+                    adjacencyList[i] = new List<(int, int)>();
+                }
+                if (!adjacencyList.ContainsKey(j))
+                {
+                    adjacencyList[j] = new List<(int, int)>();
+                }
+                adjacencyList[i].Add((distance, j));
+                adjacencyList[j].Add((distance, i));
             }
         }
 
@@ -31,7 +39,7 @@ public class Solution
         var frontier = new PriorityQueue<(int, int), int>();
         frontier.Enqueue((0, 0), 0);
 
-        while (frontier.Count > 0)
+        while (visited.Count < n)
         {
             var (distance, node) = frontier.Dequeue();
             
@@ -40,9 +48,9 @@ public class Solution
             visited.Add(node);
             cost += distance;
 
-            foreach (var (neighborDistance, neighbor) in adjacencyList)
+            foreach (var (neighborDistance, neighbor) in adjacencyList[node])
             {
-                if (neighbor == node)
+                if (!visited.Contains(neighbor))
                 {
                     frontier.Enqueue((neighborDistance, neighbor), neighborDistance);
                 }
