@@ -13,6 +13,7 @@ This repository contains the following sub-directories:
 
 Based on these (free) courses:
 
+- **[Algorithms](https://youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O)** :+1:,
 - [NeetCode](https://neetcode.io/) [:file_folder:](https://github.com/neetcode-gh/leetcode) :+1:,
 - [How to use Leetcode in 2020](https://youtu.be/6jf6SK9qWBc) :+1:,
 - [Leetcode Patterns](https://seanprashad.com/leetcode-patterns/) :+1:,
@@ -23,7 +24,7 @@ Also used these (paid) courses & books:
 - [LeetCode](https://leetcode.com/) :+1:,
 - [Beginning Data Structures and Algorithms in C#](https://learning.oreilly.com/videos/beginning-data-structures/9781789610352/) [:file_folder:](https://github.com/PacktPublishing/Beginning-Data-Structures-and-Algorithms-in-C-Sharp),
 - [C# Data Structures and Algorithms](https://learning.oreilly.com/library/view/c-data-structures/9781788833738/) [:file_folder:](https://github.com/PacktPublishing/C-Sharp-Data-Structures-and-Algorithms),
-- [Data Structures and Algorithms: The Complete Masterclass](https://learning.oreilly.com/videos/data-structures-and/9781801078504/) [:file_folder:](https://github.com/PacktPublishing/Data-Structures-and-Algorithms-The-Complete-Masterclass),
+- ~~[Data Structures and Algorithms: The Complete Masterclass](https://learning.oreilly.com/videos/data-structures-and/9781801078504/)~~ [:file_folder:](https://github.com/PacktPublishing/Data-Structures-and-Algorithms-The-Complete-Masterclass),
 - [Everyday Data Structures](https://learning.oreilly.com/library/view/everyday-data-structures/9781787121041/) [:file_folder:](https://github.com/packtpublishing/everyday-data-structures),
 - [Essential Algorithms, 2nd Edition](https://learning.oreilly.com/library/view/essential-algorithms-2nd/9781119575993/) [:file_folder:](https://www.wiley.com/en-ie/Essential+Algorithms:+A+Practical+Approach+to+Computer+Algorithms+Using+Python+and+C%23,+2nd+Edition-p-9781119575993#downloads-section),
 - [A Common-Sense Guide to Data Structures and Algorithms, Second Edition, 2nd Edition](https://learning.oreilly.com/library/view/a-common-sense-guide/9781680508048/),
