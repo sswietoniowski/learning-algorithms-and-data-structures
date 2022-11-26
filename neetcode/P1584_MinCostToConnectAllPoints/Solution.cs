@@ -10,6 +10,11 @@ public class Solution
 
         var n = points.Length;
 
+        if (n == 1)
+        {
+            return 0;
+        }
+
         var adjacencyList = new Dictionary<int, List<(int, int)>>();
 
         for (var i = 0; i < n; i++)
