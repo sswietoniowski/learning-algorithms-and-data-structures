@@ -6,6 +6,15 @@ public class Solution
 {
     public int MinCostClimbingStairs(int[] cost)
     {
-        throw new NotImplementedException();
+        var dp = new int[cost.Length + 1];
+
+        Array.Copy(cost, dp, cost.Length);
+
+        for (var i = dp.Length - 3; i >= 0; i--)
+        {
+            dp[i] += Math.Min(dp[i + 1], dp[i + 2]);
+        }
+
+        return Math.Min(dp[0], dp[1]);
     }
 }
