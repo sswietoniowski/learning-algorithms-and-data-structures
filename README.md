@@ -1,6 +1,6 @@
-# Learning C# - Algorithms & Data Structures
+# Learning - Algorithms & Data Structures
 
-This repository contains examples of different algorithms & data structures implemented in C#. 
+This repository contains examples of different algorithms & data structures implemented (primarily) in C#. 
 
 ## Repository Contents
 
