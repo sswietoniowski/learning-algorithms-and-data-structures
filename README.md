@@ -43,7 +43,7 @@ I also used these (paid) courses & books:
   - 📖 [Advanced Algorithms and Data Structures](https://learning.oreilly.com/library/view/advanced-algorithms-and/9781617295485/) [:file_folder:](https://www.manning.com/downloads/2097),
   - 📖 [Algorithms and Data Structures for Massive Datasets](https://learning.oreilly.com/library/view/algorithms-and-data/9781617298035/) [:file_folder:](https://www.manning.com/downloads/2489),
 - system design and architecture:
-  - ✅ 🎥 [Getting Started: Solution Architecture](https://dometrain.com/course/getting-started-solution-architecture/) :+1:.
+  - ✅ 🎥 [Dometrain](https://dometrain.com/): [Getting Started: Solution Architecture](https://dometrain.com/course/getting-started-solution-architecture/) :+1:.
 
 ## Useful Tools & Libraries
 
