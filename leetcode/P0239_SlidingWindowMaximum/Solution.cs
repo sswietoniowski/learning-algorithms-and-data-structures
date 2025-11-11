@@ -5,26 +5,36 @@ public class Solution
     // https://leetcode.com/problems/sliding-window-maximum
     public int[] MaxSlidingWindow(int[] nums, int k)
     {
-        if (nums == null || nums.Length == 0 || k <= 0) return [];
+        if (nums == null || nums.Length == 0 || k <= 0)
+            return Array.Empty<int>();
 
         int n = nums.Length;
-        int[] result = new int[n - k + 1];
-        LinkedList<int> dq = new LinkedList<int>();
+        int[] output = new int[n - k + 1];
+        var q = new LinkedList<int>();
+        int l = 0,
+            r = 0;
 
-        int ri = 0;
-        for (int i = 0; i < n; i++)
+        while (r < n)
         {
-            if (dq.Count > 0 && dq.First.Value <= i - k) dq.RemoveFirst();
+            while (q.Count > 0 && nums[q.Last.Value] < nums[r])
+            {
+                q.RemoveLast();
+            }
+            q.AddLast(r);
 
-            while (dq.Count > 0 && nums[dq.Last.Value] <= nums[i])
-                dq.RemoveLast();
+            if (l > q.First.Value)
+            {
+                q.RemoveFirst();
+            }
 
-            dq.AddLast(i);
-
-            if (i >= k - 1)
-                result[ri++] = nums[dq.First.Value];
+            if ((r + 1) >= k)
+            {
+                output[l] = nums[q.First.Value];
+                l++;
+            }
+            r++;
         }
 
-        return result;
+        return output;
     }
 }
