@@ -6,7 +6,7 @@ public class Solution
     public int[] MaxSlidingWindow(int[] nums, int k)
     {
         if (nums == null || nums.Length == 0 || k <= 0)
-            return Array.Empty<int>();
+            return [];
 
         int n = nums.Length;
         int[] output = new int[n - k + 1];
