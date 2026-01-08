@@ -13,24 +13,25 @@ This repository contains the following sub-directories:
 
 Based on these (free) courses:
 
-- 🎥 **[Algorithms](https://youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O)** :+1:,
-- 🎥 [Harvard CS50 – Full Computer Science University Course](https://youtu.be/8mAITcNt710),
-- 🎥 [Princeton University - Algorithms, Part I](https://www.coursera.org/learn/algorithms-part1?irclickid=x5l0X4xG%3AxyPU-e1nL0Kt3wLUkFwdO2dFTn3Xk0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=3552395&utm_content=b2c),
-- 🎥 [Princeton University - Algorithms, Part II](https://www.coursera.org/learn/algorithms-part2?irclickid=x5l0X4xG%3AxyPU-e1nL0Kt3wLUkFwdO25FTn3Xk0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=3552395&utm_content=b2c),
+- ✅ 🎥 **[Algorithms](https://youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O)** :+1:,
+- ✅ 🎥 [Harvard CS50 – Full Computer Science University Course](https://youtu.be/8mAITcNt710),
+- ✅ 🎥 [Princeton University - Algorithms, Part I](https://www.coursera.org/learn/algorithms-part1?irclickid=x5l0X4xG%3AxyPU-e1nL0Kt3wLUkFwdO2dFTn3Xk0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=3552395&utm_content=b2c),
+- ✅ 🎥 [Princeton University - Algorithms, Part II](https://www.coursera.org/learn/algorithms-part2?irclickid=x5l0X4xG%3AxyPU-e1nL0Kt3wLUkFwdO25FTn3Xk0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=3552395&utm_content=b2c),
 - ✅ 🎥 [NeetCode](https://neetcode.io/) [:file_folder:](https://github.com/neetcode-gh/leetcode) :+1:,
-- 🎥 [How to use Leetcode in 2020](https://youtu.be/6jf6SK9qWBc) :+1:,
-- 📖 [Leetcode Patterns](https://seanprashad.com/leetcode-patterns/) :+1:,
-- 🎥 [Data Structures Easy to Advanced Course - Full Tutorial from a Google Engineer](https://youtu.be/RBSGKlAvoiM),
-- 🎥 [Data Structures](https://youtube.com/playlist?list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX),
-- 📖 [Technical Interview](https://github.com/alibaba-aero/technical-interview),
-- 📖 [C# ALGORITHMS](https://github.com/aalhour/C-Sharp-Algorithms).
+- ✅ 🎥 [How to use Leetcode in 2020](https://youtu.be/6jf6SK9qWBc) :+1:,
+- ✅ 📖 [Leetcode Patterns](https://seanprashad.com/leetcode-patterns/) :+1:,
+- ✅ 🎥 [Data Structures Easy to Advanced Course - Full Tutorial from a Google Engineer](https://youtu.be/RBSGKlAvoiM),
+- ✅ 🎥 [Data Structures](https://youtube.com/playlist?list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX),
+- ✅ 📖 [Technical Interview](https://github.com/alibaba-aero/technical-interview),
+- ✅ 📖 [C# ALGORITHMS](https://github.com/aalhour/C-Sharp-Algorithms).
 
 I also used these (paid) courses & books:
 
-- ✅ 📖 [LeetCode](https://leetcode.com/) :+1:,
-- 📖 [HackerRank](https://www.hackerrank.com/),
-- 📖 [CodeSignal](https://codesignal.com/),
-- 📖 [Pramp](https://www.pramp.com/),
+- ✅ 💻 [LeetCode](https://leetcode.com/) :+1: - online platform for coding interview preparation,
+- 💻 [HackerRank](https://www.hackerrank.com/) - coding challenges and technical interview preparation platform,
+- 💻 [CodeSignal](https://codesignal.com/) - skills assessment and experiential learning platform,
+- 💻 [Codeforces](https://codeforces.com/) - competitive programming platform,
+- 💻 [Pramp](https://www.pramp.com/) - peer-to-peer mock interview platform,
 - 🎥 [Beginning Data Structures and Algorithms in C#](https://learning.oreilly.com/videos/beginning-data-structures/9781789610352/) [:file_folder:](https://github.com/PacktPublishing/Beginning-Data-Structures-and-Algorithms-in-C-Sharp),
 - 📖 [C# Data Structures and Algorithms](https://learning.oreilly.com/library/view/c-data-structures/9781788833738/) [:file_folder:](https://github.com/PacktPublishing/C-Sharp-Data-Structures-and-Algorithms),
 - 📖 [Everyday Data Structures](https://learning.oreilly.com/library/view/everyday-data-structures/9781787121041/) [:file_folder:](https://github.com/packtpublishing/everyday-data-structures),
