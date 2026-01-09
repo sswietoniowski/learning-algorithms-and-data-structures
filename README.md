@@ -27,7 +27,7 @@ Based on these (free) courses:
 
 I also used these (paid) courses & books:
 
-- ✅ 💻 [LeetCode](https://leetcode.com/) :+1: - online platform for coding interview preparation,
+- ✅ :+1: 💻 [LeetCode](https://leetcode.com/) - online platform for coding interview preparation,
 - 💻 [HackerRank](https://www.hackerrank.com/) - coding challenges and technical interview preparation platform,
 - 💻 [CodeSignal](https://codesignal.com/) - skills assessment and experiential learning platform,
 - 💻 [Codeforces](https://codeforces.com/) - competitive programming platform,
