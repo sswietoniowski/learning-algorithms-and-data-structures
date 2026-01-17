@@ -47,8 +47,9 @@ public class Solution
         while (visited.Count < n)
         {
             var (distance, node) = frontier.Dequeue();
-            
-            if (visited.Contains(node)) continue;
+
+            if (visited.Contains(node))
+                continue;
 
             visited.Add(node);
             cost += distance;
@@ -61,7 +62,7 @@ public class Solution
                 }
             }
         }
-        
+
         return cost;
     }
 }
