@@ -1,9 +1,9 @@
 ﻿namespace neetcode.P0121_BestTimeToBuyAndSellStock;
 
+// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+// https://youtu.be/1pkOgXD63yU
 public class Solution
 {
-    // https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
-    // https://youtu.be/1pkOgXD63yU
     public int MaxProfit(int[] prices)
     {
         int maxProfit = 0;
