@@ -4,6 +4,8 @@ namespace neetcode.P1768_MergeStringsAlternately;
 
 // https://leetcode.com/problems/merge-strings-alternately/description/
 // https://neetcode.io/problems/merge-strings-alternately/question
+// v1
+/*
 public class Solution
 {
     public string MergeAlternately(string word1, string word2)
@@ -25,6 +27,35 @@ public class Solution
                 index2++;
             }
         }
+        return result.ToString();
+    }
+}
+*/
+// v2
+public class Solution
+{
+    public string MergeAlternately(string word1, string word2)
+    {
+        int n = word1.Length;
+        int m = word2.Length;
+        int minLength = Math.Min(n, m);
+        var result = new StringBuilder(n + m);
+
+        for (int i = 0; i < minLength; i++)
+        {
+            result.Append(word1[i]);
+            result.Append(word2[i]);
+        }
+
+        if (n > m)
+        {
+            result.Append(word1.AsSpan(minLength));
+        }
+        else if (m > n)
+        {
+            result.Append(word2.AsSpan(minLength));
+        }
+
         return result.ToString();
     }
 }
