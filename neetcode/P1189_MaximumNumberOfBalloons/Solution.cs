@@ -2,6 +2,8 @@
 
 // https://leetcode.com/problems/maximum-number-of-balloons/description/
 // https://neetcode.io/problems/maximum-number-of-balloons/question?list=allNC
+// v1
+/*
 public class Solution
 {
     public int MaxNumberOfBalloons(string text)
@@ -51,5 +53,35 @@ public class Solution
         }
 
         return combinations;
+    }
+}
+*/
+// v2
+public class Solution
+{
+    public int MaxNumberOfBalloons(string text)
+    {
+        int[] countText = new int[26];
+        foreach (char c in text)
+        {
+            countText[c - 'a']++;
+        }
+
+        Dictionary<char, int> balloon = new Dictionary<char, int>
+        {
+            { 'b', 1 },
+            { 'a', 1 },
+            { 'l', 2 },
+            { 'o', 2 },
+            { 'n', 1 },
+        };
+
+        int res = text.Length;
+        foreach (var (key, value) in balloon)
+        {
+            int count = countText[key - 'a'];
+            res = Math.Min(res, count / value);
+        }
+        return res;
     }
 }
