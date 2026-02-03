@@ -1,4 +1,4 @@
-﻿namespace neetcode.P455_AssignCookies;
+﻿namespace neetcode.P0455_AssignCookies;
 
 // https://leetcode.com/problems/assign-cookies/description/
 // https://neetcode.io/problems/assign-cookies/question
