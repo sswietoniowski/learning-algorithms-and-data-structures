@@ -3,6 +3,7 @@
 // https://leetcode.com/problems/implement-queue-using-stacks/description/
 // https://neetcode.io/problems/implement-queue-using-stacks/question?list=allNC
 // v1
+/*
 public class MyQueue
 {
     private Stack<int> activeStack = new();
@@ -38,6 +39,49 @@ public class MyQueue
         return activeStack.Count == 0;
     }
 }
+*/
+// v2
+public class MyQueue
+{
+    private readonly Stack<int> _stackIn = new();
+    private readonly Stack<int> _stackOut = new();
+
+    public MyQueue() { }
+
+    public void Push(int x)
+    {
+        _stackIn.Push(x);
+    }
+
+    public int Pop()
+    {
+        EnsureStackOutHasData();
+        return _stackOut.Pop();
+    }
+
+    public int Peek()
+    {
+        EnsureStackOutHasData();
+        return _stackOut.Peek();
+    }
+
+    public bool Empty()
+    {
+        return _stackIn.Count == 0 && _stackOut.Count == 0;
+    }
+
+    private void EnsureStackOutHasData()
+    {
+        if (_stackOut.Count == 0)
+        {
+            while (_stackIn.Count > 0)
+            {
+                _stackOut.Push(_stackIn.Pop());
+            }
+        }
+    }
+}
+
 
 /**
  * Your MyQueue object will be instantiated and called as such:
