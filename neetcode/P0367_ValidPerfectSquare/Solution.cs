@@ -3,6 +3,7 @@
 // https://leetcode.com/problems/valid-perfect-square/description/
 // https://neetcode.io/problems/valid-perfect-square/question
 // v1
+/*
 public class Solution
 {
     public bool IsPerfectSquare(int num)
@@ -32,5 +33,25 @@ public class Solution
         }
 
         return false;
+    }
+}
+*/
+// v2
+public class Solution
+{
+    public bool IsPerfectSquare(int num)
+    {
+        // Newton’s Method (also known as the Newton-Raphson method)
+        if (num < 2)
+            return true;
+
+        long x = num / 2;
+
+        while (x * x > num)
+        {
+            x = (x + num / x) / 2;
+        }
+
+        return x * x == num;
     }
 }
