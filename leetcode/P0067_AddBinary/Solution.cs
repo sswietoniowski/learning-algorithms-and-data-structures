@@ -24,9 +24,7 @@ public class Solution
 
         for (int i = maxLength - 1; i >= 0; i--)
         {
-            int count = (carry ? 1 : 0)
-                        + (a[i] == '1' ? 1 : 0)
-                        + (b[i] == '1' ? 1 : 0);
+            int count = (carry ? 1 : 0) + (a[i] == '1' ? 1 : 0) + (b[i] == '1' ? 1 : 0);
 
             carry = false;
             char digit = '0';
