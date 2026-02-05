@@ -2,6 +2,7 @@
 
 // https://leetcode.com/problems/intersection-of-two-arrays-ii/description/
 // v1
+/*
 public class Solution
 {
     public int[] Intersect(int[] nums1, int[] nums2)
@@ -27,6 +28,36 @@ public class Solution
                 }
             }
         }
+        return result.ToArray();
+    }
+}
+*/
+// v2
+public class Solution
+{
+    public int[] Intersect(int[] nums1, int[] nums2)
+    {
+        if (nums1.Length > nums2.Length)
+        {
+            return Intersect(nums2, nums1);
+        }
+
+        var counts = new Dictionary<int, int>();
+        foreach (int n in nums1)
+        {
+            counts[n] = counts.GetValueOrDefault(n) + 1;
+        }
+
+        var result = new List<int>();
+        foreach (int n in nums2)
+        {
+            if (counts.TryGetValue(n, out int count) && count > 0)
+            {
+                result.Add(n);
+                counts[n]--;
+            }
+        }
+
         return result.ToArray();
     }
 }
