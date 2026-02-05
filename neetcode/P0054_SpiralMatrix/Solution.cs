@@ -8,7 +8,8 @@ public class Solution
     {
         var result = new List<int>();
 
-        if (matrix.Length == 0) return result;
+        if (matrix.Length == 0)
+            return result;
 
         var left = 0;
         var right = matrix[0].Length;
@@ -35,7 +36,7 @@ public class Solution
             {
                 break;
             }
-                
+
             // right to left
             for (int i = right - 1; i >= left; i--)
             {
@@ -50,7 +51,7 @@ public class Solution
             }
             left++;
         }
-            
+
         return result;
     }
 }
