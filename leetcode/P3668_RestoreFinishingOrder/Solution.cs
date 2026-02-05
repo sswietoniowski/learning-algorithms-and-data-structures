@@ -1,6 +1,8 @@
 ﻿namespace leetcode.P3668_RestoreFinishingOrder;
 
 // https://leetcode.com/problems/restore-finishing-order/description/
+// v1
+/*
 public class Solution
 {
     public int[] RecoverOrder(int[] order, int[] friends)
@@ -20,6 +22,36 @@ public class Solution
                 i++;
             }
         }
+        return result;
+    }
+}
+*/
+// v2
+public class Solution
+{
+    public int[] RecoverOrder(int[] order, int[] friends)
+    {
+        int friendCount = friends.Length;
+        var result = new int[friendCount];
+
+        bool[] isFriend = new bool[101];
+        foreach (int f in friends)
+        {
+            isFriend[f] = true;
+        }
+
+        int found = 0;
+        foreach (int person in order)
+        {
+            if (isFriend[person])
+            {
+                result[found++] = person;
+
+                if (found == friendCount)
+                    break;
+            }
+        }
+
         return result;
     }
 }
