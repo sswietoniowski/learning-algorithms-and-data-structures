@@ -17,18 +17,24 @@ public class Solution
                 return true;
             }
 
-            if (row < 0 || row >= rows || column < 0 || column >= columns
+            if (
+                row < 0
+                || row >= rows
+                || column < 0
+                || column >= columns
                 || word[index] != board[row][column]
-                || path.Contains((row, column)))
+                || path.Contains((row, column))
+            )
             {
                 return false;
             }
 
             path.Add((row, column));
-            var result = Backtrack(row + 1, column, index + 1) ||
-                         Backtrack(row - 1, column, index + 1) ||
-                         Backtrack(row, column + 1, index + 1) ||
-                         Backtrack(row, column - 1, index + 1);
+            var result =
+                Backtrack(row + 1, column, index + 1)
+                || Backtrack(row - 1, column, index + 1)
+                || Backtrack(row, column + 1, index + 1)
+                || Backtrack(row, column - 1, index + 1);
             path.Remove((row, column));
 
             return result;
