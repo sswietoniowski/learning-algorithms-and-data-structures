@@ -1,4 +1,4 @@
-namespace neetcode.P0084._LargestRectangleInHistogram;
+namespace neetcode.P0084_LargestRectangleInHistogram;
 
 // https://leetcode.com/problems/largest-rectangle-in-histogram/description/
 // https://neetcode.io/problems/largest-rectangle-in-histogram?list=neetcode150
