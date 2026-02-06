@@ -1,6 +1,8 @@
 ﻿namespace neetcode.P1701_AverageWaitingTime;
 
 // https://leetcode.com/problems/average-waiting-time/description/
+// v1
+/*
 public class Solution
 {
     public double AverageWaitingTime(int[][] customers)
@@ -31,5 +33,27 @@ public class Solution
         }
 
         return waiting / ((double)customers.Length);
+    }
+}
+*/
+// v2
+public class Solution
+{
+    public double AverageWaitingTime(int[][] customers)
+    {
+        long chefFreeAt = 0;
+        long totalWaitTime = 0;
+
+        foreach (var customer in customers)
+        {
+            long arrival = customer[0];
+            long cookTime = customer[1];
+
+            chefFreeAt = Math.Max(chefFreeAt, arrival) + cookTime;
+
+            totalWaitTime += (chefFreeAt - arrival);
+        }
+
+        return (double)totalWaitTime / customers.Length;
     }
 }
