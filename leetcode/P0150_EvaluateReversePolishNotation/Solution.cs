@@ -20,7 +20,7 @@ public class Solution
                     "-" => a - b,
                     "*" => a * b,
                     "/" => a / b,
-                    _ => 0
+                    _ => 0,
                 };
 
                 stack.Push(c);
