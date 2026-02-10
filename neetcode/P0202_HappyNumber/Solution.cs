@@ -14,7 +14,6 @@ public class Solution
         return result;
     }
 
-
     // https://leetcode.com/problems/happy-number/
     // https://youtu.be/ljz85bxOYJ0
     public bool IsHappy(int n)
