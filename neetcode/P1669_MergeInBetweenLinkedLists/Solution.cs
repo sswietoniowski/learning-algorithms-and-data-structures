@@ -24,29 +24,61 @@ public class ListNode
  *     }
  * }
  */
+// v1
+/*
+public class Solution
+{
+   public ListNode MergeInBetween(ListNode list1, int a, int b, ListNode list2)
+   {
+       ListNode dummy = new ListNode(0, list1);
+       ListNode current = dummy;
+       for (int i = 0; i < a; i++)
+       {
+           current = current.next;
+       }
+       ListNode tmp = current;
+       for (int i = 0; i < (b - a + 1); i++)
+       {
+           current = current.next;
+       }
+       ListNode list1End = current.next;
+       current = tmp;
+       current.next = list2;
+       while (current.next != null)
+       {
+           current = current.next;
+       }
+       current.next = list1End;
+       return dummy.next;
+   }
+}
+*/
+// v2
 public class Solution
 {
     public ListNode MergeInBetween(ListNode list1, int a, int b, ListNode list2)
     {
-        ListNode dummy = new ListNode(0, list1);
-        ListNode current = dummy;
-        for (int i = 0; i < a; i++)
+        ListNode startNode = list1;
+        for (int i = 0; i < a - 1; i++)
         {
-            current = current.next;
+            startNode = startNode.next;
         }
-        ListNode tmp = current;
-        for (int i = 0; i < (b - a + 1); i++)
+
+        ListNode endNode = startNode;
+        for (int i = 0; i < (b - a) + 2; i++)
         {
-            current = current.next;
+            endNode = endNode.next;
         }
-        ListNode list1End = current.next;
-        current = tmp;
-        current.next = list2;
-        while (current.next != null)
+
+        startNode.next = list2;
+
+        while (list2.next != null)
         {
-            current = current.next;
+            list2 = list2.next;
         }
-        current.next = list1End;
-        return dummy.next;
+
+        list2.next = endNode;
+
+        return list1;
     }
 }
