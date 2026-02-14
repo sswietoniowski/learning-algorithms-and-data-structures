@@ -24,36 +24,58 @@ public class ListNode
  *     }
  * }
  */
+// v1
+/*
+public class Solution
+{
+   public int GetDecimalValue(ListNode head)
+   {
+       ListNode reversedHead = ReverseList(head);
+
+       int number = 0;
+       int positionValue = 1;
+       ListNode current = reversedHead;
+       while (current is not null)
+       {
+           number += current.val * positionValue;
+
+           current = current.next;
+           positionValue *= 2;
+       }
+
+       ReverseList(reversedHead);
+       
+       return number;
+   }
+
+   private ListNode ReverseList(ListNode head)
+   {
+       ListNode prev = null;
+       ListNode current = head;
+       while (current is not null)
+       {
+           ListNode next = current.next;
+           current.next = prev;
+           prev = current;
+           current = next;
+       }
+       return prev;
+   }
+}
+*/
+// v2
 public class Solution
 {
     public int GetDecimalValue(ListNode head)
     {
-        ListNode reversedHead = ReverseList(head);
-        int number = 0;
-        int positionValue = 1;
-        ListNode current = reversedHead;
-        while (current is not null)
-        {
-            number += current.val * positionValue;
+        int result = 0;
 
-            current = current.next;
-            positionValue *= 2;
-        }
-        ReverseList(reversedHead);
-        return number;
-    }
-
-    private ListNode ReverseList(ListNode head)
-    {
-        ListNode prev = null;
-        ListNode current = head;
-        while (current is not null)
+        while (head != null)
         {
-            ListNode next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
+            result = (result << 1) | head.val;
+            head = head.next;
         }
-        return prev;
+
+        return result;
     }
 }
