@@ -4,7 +4,13 @@
 // https://youtu.be/rSA3t6BDDwg
 public class Solution
 {
-    private void Backtrack(int[] candidates, int target, int start, List<int> path, IList<IList<int>> result)
+    private void Backtrack(
+        int[] candidates,
+        int target,
+        int start,
+        List<int> path,
+        IList<IList<int>> result
+    )
     {
         if (target == 0)
         {
