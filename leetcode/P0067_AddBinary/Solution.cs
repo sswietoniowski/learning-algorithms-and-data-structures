@@ -2,6 +2,8 @@
 
 namespace leetcode.P0067_AddBinary;
 
+// v1
+/*
 public class Solution
 {
     public string AddBinary(string a, string b)
@@ -51,5 +53,43 @@ public class Solution
         }
 
         return sb.ToString();
+    }
+}
+*/
+// v2
+public class Solution
+{
+    public string AddBinary(string a, string b)
+    {
+        StringBuilder sb = new StringBuilder(Math.Max(a.Length, b.Length) + 1);
+
+        int i = a.Length - 1;
+        int j = b.Length - 1;
+        int carry = 0;
+
+        while (i >= 0 || j >= 0 || carry != 0)
+        {
+            int sum = carry;
+
+            if (i >= 0)
+                sum += a[i--] - '0';
+            if (j >= 0)
+                sum += b[j--] - '0';
+
+            sb.Append(sum % 2);
+            carry = sum / 2;
+        }
+
+        return ReverseStringBuilder(sb);
+    }
+
+    private string ReverseStringBuilder(StringBuilder sb)
+    {
+        char[] result = new char[sb.Length];
+        for (int k = 0; k < sb.Length; k++)
+        {
+            result[k] = sb[sb.Length - k - 1];
+        }
+        return new string(result);
     }
 }
