@@ -4,6 +4,7 @@ public class ListNode
 {
     public int val;
     public ListNode next;
+
     public ListNode(int val = 0, ListNode next = null)
     {
         this.val = val;
@@ -22,7 +23,6 @@ public class ListNode
      *     }
      * }
      */
-
 
 // https://leetcode.com/problems/reorder-list/
 // https://youtu.be/S5bfdUTrKLM
