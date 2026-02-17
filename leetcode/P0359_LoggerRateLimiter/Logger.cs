@@ -5,9 +5,7 @@ public class Logger
     private readonly HashSet<string> _messages = new();
     private readonly Dictionary<string, int> _timestamps = new();
 
-    public Logger()
-    {
-    }
+    public Logger() { }
 
     public bool ShouldPrintMessage(int timestamp, string message)
     {
