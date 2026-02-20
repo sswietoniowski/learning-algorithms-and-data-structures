@@ -28,38 +28,36 @@ public class TreeNode
  *     }
  * }
  */
+// v1
+/*
+public class Solution
+{
+   public TreeNode SearchBST(TreeNode root, int val)
+   {
+       if (root == null || root.val == val)
+           return root;
+
+       return val < root.val ? SearchBST(root.left, val) : SearchBST(root.right, val);
+   }
+}
+*/
+// v2
 public class Solution
 {
     public TreeNode SearchBST(TreeNode root, int val)
     {
-        if (root is null)
+        TreeNode current = root;
+
+        while (current is not null)
         {
-            return null;
+            if (current.val == val)
+            {
+                return current;
+            }
+
+            current = (val < current.val) ? current.left : current.right;
         }
 
-        if (root.left is null && root.right is null)
-        {
-            if (root.val == val)
-            {
-                return root;
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        if (root.val == val)
-        {
-            return root;
-        }
-        else if (root.val < val)
-        {
-            return SearchBST(root.right, val);
-        }
-        else
-        {
-            return SearchBST(root.left, val);
-        }
+        return null;
     }
 }
