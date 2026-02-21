@@ -5,6 +5,7 @@ public class TreeNode
     public int val;
     public TreeNode left;
     public TreeNode right;
+
     public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
     {
         this.val = val;
@@ -31,7 +32,14 @@ public class TreeNode
 // https://youtu.be/ihj4IQGZ2zc
 public class Solution
 {
-    private TreeNode BuildTree(int[] preorder, int[] inorder, int preorderStart, int preorderEnd, int inorderStart, int inorderEnd)
+    private TreeNode BuildTree(
+        int[] preorder,
+        int[] inorder,
+        int preorderStart,
+        int preorderEnd,
+        int inorderStart,
+        int inorderEnd
+    )
     {
         if (preorderStart > preorderEnd || inorderStart > inorderEnd)
         {
@@ -50,8 +58,22 @@ public class Solution
         }
 
         var leftSubtreeSize = rootIndex - inorderStart;
-        root.left = BuildTree(preorder, inorder, preorderStart + 1, preorderStart + leftSubtreeSize, inorderStart, rootIndex - 1);
-        root.right = BuildTree(preorder, inorder, preorderStart + leftSubtreeSize + 1, preorderEnd, rootIndex + 1, inorderEnd);
+        root.left = BuildTree(
+            preorder,
+            inorder,
+            preorderStart + 1,
+            preorderStart + leftSubtreeSize,
+            inorderStart,
+            rootIndex - 1
+        );
+        root.right = BuildTree(
+            preorder,
+            inorder,
+            preorderStart + leftSubtreeSize + 1,
+            preorderEnd,
+            rootIndex + 1,
+            inorderEnd
+        );
         return root;
     }
 
