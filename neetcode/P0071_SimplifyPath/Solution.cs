@@ -1,15 +1,36 @@
-﻿namespace neetcode.P0070_ClimbingStairs;
+﻿namespace neetcode.P0071_SimplifyPath;
 
+// https://leetcode.com/problems/simplify-path/description/
+// https://neetcode.io/problems/simplify-path/question
 public class Solution
 {
-    public int ClimbStairs(int n)
+    public string SimplifyPath(string path)
     {
-        int one = 1;
-        int two = 1;
-        for (int i = 0; i < n - 1; i++)
+        string[] components = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
+        Stack<string> stack = new Stack<string>();
+
+        foreach (string directory in components)
         {
-            (one, two) = (one + two, one);
+            if (directory == ".")
+            {
+                continue;
+            }
+            else if (directory == "..")
+            {
+                if (stack.Count > 0)
+                {
+                    stack.Pop();
+                }
+            }
+            else
+            {
+                stack.Push(directory);
+            }
         }
-        return one;
+
+        var result = new List<string>(stack);
+        result.Reverse();
+
+        return "/" + string.Join("/", result);
     }
 }
