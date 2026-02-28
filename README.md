@@ -20,6 +20,7 @@ Based on these (free) courses:
 - ✅ 🎥 [NeetCode](https://neetcode.io/) [:file_folder:](https://github.com/neetcode-gh/leetcode) :+1:,
 - ✅ 🎥 [How to use Leetcode in 2020](https://youtu.be/6jf6SK9qWBc) :+1:,
 - ✅ 📖 [Leetcode Patterns](https://seanprashad.com/leetcode-patterns/) :+1:,
+- 🎥 [Data Structure and Algorithm Patterns for LeetCode Interviews – Tutorial](https://youtu.be/Z_c4byLrNBU?si=Z9nVnM2X-6OAA_mb),
 - ✅ 🎥 [Data Structures Easy to Advanced Course - Full Tutorial from a Google Engineer](https://youtu.be/RBSGKlAvoiM),
 - ✅ 🎥 [Data Structures](https://youtube.com/playlist?list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX),
 - ✅ 📖 [Technical Interview](https://github.com/alibaba-aero/technical-interview),
