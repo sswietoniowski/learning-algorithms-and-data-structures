@@ -1,34 +1,25 @@
 ﻿namespace neetcode.P0198_HouseRobber;
 
+// https://leetcode.com/problems/house-robber/description/
+// https://neetcode.io/problems/house-robber/question
 public class Solution
 {
-    // https://leetcode.com/problems/house-robber/description/
-    // https://neetcode.io/problems/house-robber/question?list=blind75
-    public int HammingWeight(uint n)
+    public int Rob(int[] nums)
     {
-        // v1
-        //int counter = 0;
-        //for (int i = 0; i < 32; i++)
-        //{
-        //    if ((n & (1 << i)) != 0)
-        //    {
-        //        counter++;
-        //    }
-        //}
-        //return counter;
-        // v2
-        int counter = 0;
-        int mask = 1;
-        for (int i = 0; i < 32; i++)
-        {
-            if ((n & mask) != 0)
-            {
-                counter++;
-            }
+        if (nums.Length == 0)
+            return 0;
+        if (nums.Length == 1)
+            return nums[0];
 
-            mask <<= 1;
+        int[] dp = new int[nums.Length];
+        dp[0] = nums[0];
+        dp[1] = Math.Max(nums[0], nums[1]);
+
+        for (int i = 2; i < nums.Length; i++)
+        {
+            dp[i] = Math.Max(dp[i - 1], nums[i] + dp[i - 2]);
         }
 
-        return counter;
+        return dp[nums.Length - 1];
     }
 }
