@@ -64,7 +64,7 @@ public class LRUCache
         var newNode = new Node<int, int> { Key = key, Value = value };
         Add(newNode);
         _cache[key] = newNode;
-        
+
         if (_cache.Count > _capacity)
         {
             var lru = _left.Next;
