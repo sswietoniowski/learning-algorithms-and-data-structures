@@ -7,7 +7,7 @@ public class Solution
     public int LeastInterval(char[] tasks, int n)
     {
         var map = new Dictionary<char, int>();
-        
+
         foreach (var task in tasks)
         {
             if (!map.ContainsKey(task))
@@ -55,7 +55,6 @@ public class Solution
                     maxHeap.Enqueue(count, -count);
                 }
             }
-
         }
 
         return time;
