@@ -6,13 +6,23 @@ public class Solution
 {
     private int GetArea(int[][] grid, int row, int col)
     {
-        if (row < 0 || row >= grid.Length || col < 0 || col >= grid[row].Length || grid[row][col] == 0)
+        if (
+            row < 0
+            || row >= grid.Length
+            || col < 0
+            || col >= grid[row].Length
+            || grid[row][col] == 0
+        )
         {
             return 0;
         }
 
         grid[row][col] = 0;
-        return 1 + GetArea(grid, row - 1, col) + GetArea(grid, row + 1, col) + GetArea(grid, row, col - 1) + GetArea(grid, row, col + 1);
+        return 1
+            + GetArea(grid, row - 1, col)
+            + GetArea(grid, row + 1, col)
+            + GetArea(grid, row, col - 1)
+            + GetArea(grid, row, col + 1);
     }
 
     public int MaxAreaOfIsland(int[][] grid)
