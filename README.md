@@ -25,7 +25,7 @@ Based on these (free) courses:
 - ✅ 🎥 [Data Structures](https://youtube.com/playlist?list=PLI1t_8YX-Apv-UiRlnZwqqrRT8D1RhriX),
 - ✅ 📖 [Technical Interview](https://github.com/alibaba-aero/technical-interview),
 - ✅ 📖 [C# ALGORITHMS](https://github.com/aalhour/C-Sharp-Algorithms),
-- 🎥 [Learn Dynamic Programming with Animations](https://youtu.be/66hDgWottdA?si=Nt4BCXIAPLrbGDxM).
+- ✅ 🎥 [Learn Dynamic Programming with Animations](https://youtu.be/66hDgWottdA?si=Nt4BCXIAPLrbGDxM) :+1:.
 
 I also used these (paid) courses & books:
 
