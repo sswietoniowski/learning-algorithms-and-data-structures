@@ -13,13 +13,7 @@ public class Solution
         visited.Add((row, column));
         queue.Enqueue((row, column));
 
-        (int, int)[] directions = new (int, int)[]
-        {
-            (1, 0),
-            (-1, 0),
-            (0, 1),
-            (0, -1)
-        };
+        (int, int)[] directions = new (int, int)[] { (1, 0), (-1, 0), (0, 1), (0, -1) };
 
         while (queue.Count > 0)
         {
@@ -29,10 +23,14 @@ public class Solution
                 int rl = r + dr;
                 int cl = c + dc;
                 var location = (rl, cl);
-                if (rl >= 0 && rl < rows
-                            && cl >= 0 && cl < columns
-                            && grid[rl][cl] == '1'
-                            && !visited.Contains(location))
+                if (
+                    rl >= 0
+                    && rl < rows
+                    && cl >= 0
+                    && cl < columns
+                    && grid[rl][cl] == '1'
+                    && !visited.Contains(location)
+                )
                 {
                     queue.Enqueue(location);
                     visited.Add(location);
