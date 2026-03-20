@@ -1,6 +1,7 @@
 ﻿using System.Text;
 
 namespace neetcode.P0271_EncodeAndDecodeStrings;
+
 // https://leetcode.com/problems/encode-and-decode-strings/
 // https://youtu.be/B1k_sxOSgv8
 // v1
@@ -139,7 +140,8 @@ public class Codec
     // Decodes a single string to a list of strings.
     public IList<string> decode(string s)
     {
-        int i = 0, n = s.Length;
+        int i = 0,
+            n = s.Length;
         List<string> result = new List<string>();
         while (i < n)
         {
