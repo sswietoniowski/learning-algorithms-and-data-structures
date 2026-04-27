@@ -35,7 +35,7 @@ I also used these (paid) courses & books:
 - 💻 [CodeSignal](https://codesignal.com/) - skills assessment and experiential learning platform,
 - 💻 [Codeforces](https://codeforces.com/) - competitive programming platform,
 - 💻 [Pramp](https://www.pramp.com/) - peer-to-peer mock interview platform,
-- 🎥 [Beginning Data Structures and Algorithms in C#](https://learning.oreilly.com/videos/beginning-data-structures/9781789610352/) [:file_folder:](https://github.com/PacktPublishing/Beginning-Data-Structures-and-Algorithms-in-C-Sharp),
+- ✅ 🎥 [Beginning Data Structures and Algorithms in C#](https://learning.oreilly.com/videos/beginning-data-structures/9781789610352/) [:file_folder:](https://github.com/PacktPublishing/Beginning-Data-Structures-and-Algorithms-in-C-Sharp),
 - 📖 [C# Data Structures and Algorithms](https://learning.oreilly.com/library/view/c-data-structures/9781788833738/) [:file_folder:](https://github.com/PacktPublishing/C-Sharp-Data-Structures-and-Algorithms),
 - 📖 [Everyday Data Structures](https://learning.oreilly.com/library/view/everyday-data-structures/9781787121041/) [:file_folder:](https://github.com/packtpublishing/everyday-data-structures),
 - 📖 [Essential Algorithms, 2nd Edition](https://learning.oreilly.com/library/view/essential-algorithms-2nd/9781119575993/) [:file_folder:](https://www.wiley.com/en-ie/Essential+Algorithms:+A+Practical+Approach+to+Computer+Algorithms+Using+Python+and+C%23,+2nd+Edition-p-9781119575993#downloads-section),
