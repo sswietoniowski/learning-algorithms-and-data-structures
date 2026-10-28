@@ -1,84 +1,36 @@
-﻿namespace neetcode.P1669_MergeInBetweenLinkedLists;
+﻿namespace neetcode.P1675_MinimizeDeviationInArray;
 
-// https://leetcode.com/problems/merge-in-between-linked-lists/description/
-public class ListNode
-{
-    public int val;
-    public ListNode next;
-
-    public ListNode(int val = 0, ListNode next = null)
-    {
-        this.val = val;
-        this.next = next;
-    }
-}
-
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public int val;
- *     public ListNode next;
- *     public ListNode(int val=0, ListNode next=null) {
- *         this.val = val;
- *         this.next = next;
- *     }
- * }
- */
-// v1
-/*
 public class Solution
 {
-   public ListNode MergeInBetween(ListNode list1, int a, int b, ListNode list2)
-   {
-       ListNode dummy = new ListNode(0, list1);
-       ListNode current = dummy;
-       for (int i = 0; i < a; i++)
-       {
-           current = current.next;
-       }
-       ListNode tmp = current;
-       for (int i = 0; i < (b - a + 1); i++)
-       {
-           current = current.next;
-       }
-       ListNode list1End = current.next;
-       current = tmp;
-       current.next = list2;
-       while (current.next != null)
-       {
-           current = current.next;
-       }
-       current.next = list1End;
-       return dummy.next;
-   }
-}
-*/
-// v2
-public class Solution
-{
-    public ListNode MergeInBetween(ListNode list1, int a, int b, ListNode list2)
+    public int MinimumDeviation(int[] nums)
     {
-        ListNode startNode = list1;
-        for (int i = 0; i < a - 1; i++)
+        var maxHeap = new PriorityQueue<int, int>(Comparer<int>.Create((a, b) => b.CompareTo(a)));
+        int minVal = int.MaxValue;
+
+        foreach (int num in nums)
         {
-            startNode = startNode.next;
+            int n = num;
+            if (n % 2 == 1)
+                n *= 2;
+            maxHeap.Enqueue(n, n);
+            minVal = Math.Min(minVal, n);
         }
 
-        ListNode endNode = startNode;
-        for (int i = 0; i < (b - a) + 2; i++)
+        int res = int.MaxValue;
+
+        while (maxHeap.Count > 0)
         {
-            endNode = endNode.next;
+            int maxVal = maxHeap.Dequeue();
+            res = Math.Min(res, maxVal - minVal);
+
+            if (maxVal % 2 == 1)
+                break;
+
+            int nextVal = maxVal / 2;
+            maxHeap.Enqueue(nextVal, nextVal);
+            minVal = Math.Min(minVal, nextVal);
         }
 
-        startNode.next = list2;
-
-        while (list2.next != null)
-        {
-            list2 = list2.next;
-        }
-
-        list2.next = endNode;
-
-        return list1;
+        return res;
     }
 }
